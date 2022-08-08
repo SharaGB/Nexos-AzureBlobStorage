@@ -1,0 +1,21 @@
+{% extends "base.html" %} {% block content %}
+
+<div class="container w-50 mt-4">
+    <center>
+        <h2 class="mt-4">Subir archivo</h2>
+    </center>
+
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        <div class="input-group">
+            <input type="file" name="file" class="form-control" id="inputGroupFile04"
+                aria-describedby="inputGroupFileAddon04" aria-label="Upload" accept=".csv" />
+            <button class="btn btn-primary" type="submit" id="inputGroupFileAddon04">
+                Subir archivo
+            </button>
+        </div>
+    </form>
+</div>
+
+{% endblock %}
